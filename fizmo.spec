@@ -9,6 +9,7 @@ Release:        %{release}
 URL:            http://spellbreaker.org/~chrender/fizmo/ 
 Source0:        http://spellbreaker.org/~chrender/fizmo/fizmo-0.6.3.tar.gz
 Patch0:		fizmo-0.6.3-config-mk.patch	
+Patch1:		fizmo-0.6.3-upstream-patches.patch
 License:        BSD
 Group:          Games/Other
 BuildRequires:  libncursesw-devel libxml2-devel libSDL_sound-devel libsndfile-devel
@@ -20,12 +21,11 @@ fiction, also know as textadventures, which where implemented either by Infocom
 or created using the Inform compiler. It is a console-based interpreter, 
 meaning that there is no graphical user interface, and works with all Z-machine
 versions except version 6.
-If you've never played a textadventure before, you might want to try 
-"Mini-Zork" to get an idea what interactive fiction is about.
 
 %prep
 %setup -q -n %{name}-%{version}
 %patch0 -p1 -b .mdv
+%patch1 -p1 -b .upstream
 
 %build
 cp config.default.mk config.mk
