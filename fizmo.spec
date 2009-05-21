@@ -1,6 +1,6 @@
 %define name    fizmo
 %define version 0.6.3
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:           %{name}
 Summary:        A Z-Machine interpreter supporting unicode, sound, blorbfile and more
@@ -17,7 +17,7 @@ BuildRoot:      %{_tmppath}/%{name}-buildroot
 
 %description
 Fizmo is a Z-Machine interpreter. That means it allows you to play interactive 
-fiction, also know as textadventures, which where implemented either by Infocom
+fiction, also know as textadventures, which were implemented either by Infocom
 or created using the Inform compiler. It is a console-based interpreter, 
 meaning that there is no graphical user interface, and works with all Z-machine
 versions except version 6.
