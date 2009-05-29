@@ -1,15 +1,14 @@
 %define name    fizmo
-%define version 0.6.3
-%define release %mkrel 2
+%define version 0.6.4
+%define release %mkrel 1
 
 Name:           %{name}
 Summary:        A Z-Machine interpreter supporting unicode, sound, blorbfile and more
 Version:        %{version}
 Release:        %{release}
 URL:            http://spellbreaker.org/~chrender/fizmo/ 
-Source0:        http://spellbreaker.org/~chrender/fizmo/fizmo-0.6.3.tar.gz
+Source0:        http://spellbreaker.org/~chrender/fizmo/sources/fizmo-0.6.4.tar.gz
 Patch0:		fizmo-0.6.3-config-mk.patch	
-Patch1:		fizmo-0.6.3-upstream-patches.patch
 License:        BSD
 Group:          Games/Other
 BuildRequires:  libncursesw-devel libxml2-devel libSDL_sound-devel libsndfile-devel
@@ -25,7 +24,6 @@ versions except version 6.
 %prep
 %setup -q -n %{name}-%{version}
 %patch0 -p1 -b .mdv
-%patch1 -p1 -b .upstream
 
 %build
 cp config.default.mk config.mk
