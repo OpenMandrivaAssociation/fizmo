@@ -1,6 +1,6 @@
 %define name    fizmo
-%define version 0.6.8
-%define release %mkrel 2
+%define version 0.6.9
+%define release %mkrel 1
 
 Name:           %{name}
 Summary:        A Z-Machine interpreter supporting unicode, sound, blorbfile and more
