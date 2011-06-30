@@ -1,5 +1,5 @@
 %define name    fizmo
-%define version 0.6.9
+%define version 0.6.10
 %define release %mkrel 1
 
 Name:           %{name}
