@@ -1,0 +1,13 @@
+Index: fizmo-0.6.3/config.default.mk
+===================================================================
+--- fizmo-0.6.3/config.default.mk
++++ fizmo-0.6.3/config.default.mk	2009-05-17 11:06:56.000000000 +0200
+@@ -9,7 +9,7 @@
+ 
+ # If defined, install goes to "$(INSTALL_PREFIX)/($FIZMO_BIN_DIR)" instead of
+ # "(INSTALL_PREFIX)/games" (usually use to subsitute "bin" for "games").
+-#FIZMO_BIN_DIR = games
++FIZMO_BIN_DIR = games
+ 
+ DEFAULT_PREFIX = /usr
+ DEFAULT_LIB_PREFIX = $(DEFAULT_PREFIX)/lib
