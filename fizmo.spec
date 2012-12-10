@@ -1,18 +1,16 @@
-%define name    fizmo
-%define version 0.6.10
-%define release %mkrel 1
-
-Name:           %{name}
-Summary:        A Z-Machine interpreter supporting unicode, sound, blorbfile and more
-Version:        %{version}
-Release:        %{release}
-URL:            http://spellbreaker.org/~chrender/fizmo/ 
-Source0:        http://spellbreaker.org/~chrender/fizmo/source/fizmo-%{version}.tar.gz
+Name:		fizmo
+Summary:	A Z-Machine interpreter supporting unicode, sound, blorbfile and more
+Version:	0.6.10
+Release:	2
+License:	BSD
+Group:		Games/Other
+URL:		http://spellbreaker.org/~chrender/fizmo/ 
+Source0:	http://spellbreaker.org/~chrender/fizmo/source/fizmo-%{version}.tar.gz
 Patch0:		fizmo-0.6.3-config-mk.patch	
-License:        BSD
-Group:          Games/Other
-BuildRequires:  libncursesw-devel libxml2-devel libSDL_sound-devel libsndfile-devel
-BuildRoot:      %{_tmppath}/%{name}-buildroot
+BuildRequires:	SDL_sound-devel
+BuildRequires:	pkgconfig(ncursesw)
+BuildRequires:	pkgconfig(libxml-2.0)
+BuildRequires:	pkgconfig(sndfile)
 
 %description
 Fizmo is a Z-Machine interpreter. That means it allows you to play interactive 
@@ -30,15 +28,12 @@ cp config.default.mk config.mk
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,0755)
 %doc CHANGELOG.txt COPYRIGHT.txt README.txt
 %{_mandir}/*/*
 %{_gamesbindir}/*
+
 
