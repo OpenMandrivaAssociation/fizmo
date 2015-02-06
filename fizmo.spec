@@ -1,7 +1,7 @@
 Name:		fizmo
 Summary:	A Z-Machine interpreter supporting unicode, sound, blorbfile and more
 Version:	0.6.10
-Release:	2
+Release:	3
 License:	BSD
 Group:		Games/Other
 URL:		http://spellbreaker.org/~chrender/fizmo/ 
