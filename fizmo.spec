@@ -7,6 +7,7 @@ Group:		Games/Other
 URL:		https://spellbreaker.org/~chrender/fizmo/ 
 Source0:	http://spellbreaker.org/~chrender/fizmo/source/fizmo-%{version}.tar.gz
 Patch0:		fizmo-0.6.3-config-mk.patch	
+BuildRequires:	make
 BuildRequires:	SDL_sound-devel
 BuildRequires:	pkgconfig(ncursesw)
 BuildRequires:	pkgconfig(libxml-2.0)
